@@ -34,6 +34,7 @@ app.get('/', (req, res) => {
                 console.log(rows);
             }
         });
+        res.send({ hello: 'world' });
 });
 
 app.get('/gettest', (req, res) => {
