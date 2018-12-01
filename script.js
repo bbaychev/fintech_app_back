@@ -2,7 +2,7 @@ var express = require('express');
 var mysql = require('mysql');
 var app = express();
 
-var port = process.env.port || 3006
+var port = process.env.PORT || 3006
 
 var connection = mysql.createConnection({
 
