@@ -25,7 +25,7 @@ connection.connect(function (error) {
 }
 );
 
-app.route('/e').get( (req, res) => {
+app.get('/' (req, res) => {
         connection.query("SELECT * FROM test", function(error, rows, fields){
             if(!!error){
                 console.log('Error - query');
