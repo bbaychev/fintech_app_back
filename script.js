@@ -36,6 +36,15 @@ app.get('/', (req, res) => {
         });
 });
 
-
+app.get('/gettest', (req, res) => {
+    connection.query("SELECT * FROM test", function(error, rows, fields){
+        if(!!error){
+            console.log('Error - query');
+        } else {
+            console.log("Success");
+            console.log(rows);
+        }
+    });
+});
 
 app.listen(port);
