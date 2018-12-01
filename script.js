@@ -37,4 +37,16 @@ app.get('/gettest', (req, res) => {
     });
 });
 
+app.get('/projects-in-progress/:id', (req, res) => {
+    connection.query("SELECT * FROM test where id = '"+ req.params.id +"'", function(error, rows, fields){
+        if(!!error){
+            console.log('Error - query');
+        } else {
+            console.log("Success");
+            console.log(rows);
+            res.send(rows);
+        }
+    });
+});
+
 app.listen(port);
