@@ -6,7 +6,7 @@
         "mysql": "^2.10.2"
     },
     "scripts": {
-        "start": "node server.js"
+        "start": "node script.js"
     },
     "engines": {
         "node": "10.x"
