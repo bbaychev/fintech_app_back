@@ -44,6 +44,7 @@ app.get('/gettest', (req, res) => {
         } else {
             console.log("Success");
             console.log(rows);
+            res.send(rows);
         }
     });
 });
