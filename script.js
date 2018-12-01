@@ -2,6 +2,8 @@ var express = require('express');
 var mysql = require('mysql');
 var app = express();
 
+var port = process.env.port || 3006
+
 var connection = mysql.createConnection({
 
     // mysql://b69ec27c5c0b5b:ef83cc53@eu-cdbr-west-02.cleardb.net/heroku_7ba11b197eba2eb?reconnect=true
@@ -36,4 +38,4 @@ app.route('/e').get( (req, res) => {
 
 
 
-app.listen(3006);
+app.listen(port);
