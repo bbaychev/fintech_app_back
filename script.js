@@ -25,18 +25,6 @@ connection.connect(function (error) {
 }
 );
 
-app.get('/', (req, res) => {
-        connection.query("SELECT * FROM test", function(error, rows, fields){
-            if(!!error){
-                console.log('Error - query');
-            } else {
-                console.log("Success");
-                console.log(rows);
-            }
-        });
-        res.send({ hello: 'world' });
-});
-
 app.get('/gettest', (req, res) => {
     connection.query("SELECT * FROM test", function(error, rows, fields){
         if(!!error){
